@@ -1,0 +1,93 @@
+.relativeDiv{
+  position: relative;
+}
+.absoluteDiv{
+  position: absolute;
+}
+.flexDiv{
+  display: flex;
+}
+.absoluteFill{
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.percentFill{
+  width: 100%;
+  height: 100%;
+}
+.flexCenterSelf{
+  justify-self: center;
+  align-self: center;
+}
+.parent{
+  width: 100%;
+  height: 33vw;
+}
+
+.decorateParent{
+  left: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+}
+.imgParent{
+  right: 0;
+  /* left: 0;
+  bottom: 0; */
+  top: 0;
+  width: 50%;
+}
+.decorate1{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00a0e9;
+}
+.decorate2{
+  right: 0;
+  top: 0;
+  width: 75%;
+  height: 90%;
+  background-color: rgb(219, 232, 235)
+}
+.decorate3{
+  left: 0;
+bottom: 0;
+  width: 40%;
+  background-color: rgb(221, 177, 247)
+}
+.decorateText{
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 70%;
+  background-color: rgb(207, 129, 252)
+}
+.lrmargin20per{
+  margin:0 20% 0 20%;
+}
+.marginAuto{
+  margin:auto;
+}
+.describeDiv{
+  width: 60%;
+}
+.videoFill{
+  width:100%;
+  height: 100% !important;
+  margin-bottom: 0;
+  /* object-fit:fill; */
+}
+.v-btn{
+  transform:translate(425px,-300px)
+}
+  /* .videolist { position:relative; float:left; width:500px; height:300px; margin-right:50px; margin-top:15px; margin-bottom:30px; } */
+  .videolist:hover{ cursor: pointer; }
+  .videoed {  width:50px; height:50px; position: absolute; left:45%; top:45%; z-index:99; border-radius:100%; }
+  .videos{ display:none; border: 1px solid #080808; position:fixed; left:50%; top:50%; margin-left:-320px; margin-top:-210px; z-index:100; width:640px; height:360px; }
+  .vclose { position:absolute;right:1%; top:1%; border-radius:100%; cursor: pointer; }
+  .masklayer{position: fixed;display: none;width: 100%;height: 1000px;top: 0px;left: 0px;background-color: rgba(0, 0, 0, 0.8);z-index: 1000;-webkit-user-select: none;-ms-user-select: none;}

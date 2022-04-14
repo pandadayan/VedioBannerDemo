@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href='./test.css'>
+  <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class='relativeDiv percentFill parent'>
+    <div class='decorateParent absoluteDiv'>
+      <div class='relativeDiv percentFill'>
+        <div class='absoluteDiv decorate1'></div>
+        <div class='absoluteDiv decorate2'></div>
+        <div class='absoluteDiv decorate3'></div>
+        <div class='absoluteDiv flexDiv decorateText'>
+          <div class='marginAuto flexCenterSelf describeDiv'>
+            <h1 class="">Morphogo System</h1>
+            <h2 class="">Application Scope</h2>
+            <div class="">Acquire cell images of cytology specimen including bone marrow aspirate smears. Locate and
+              pre-classify cells in acquired cell images and perform statistical analysis for diagnosis of hematological
+              diseases as well as routine blood tests and urine tests.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='imgParent absoluteDiv'>
+      <div class='relativeDiv percentFill'>
+        <!-- <video class='videoFill' width='100%' height='100%' data-setup='{"fluid":true}' controls autoplay loop muted preload>
+          <source src='en_banner_vedio.mp4'  type="video/mp4" >
+          </source>
+          For a better experience, keep your browser up to date. Check the following website for latest versions.
+          </video> -->
+        <!-- <img class='videoFill' src="en_banner_gif.gif" alt="">
+          <a href="en_banner_vedio.mp4"><img class="v-btn" src="VIDEO_BUTTON.png" alt=""></a> -->
+        <div class="videolist" ipath="https://www.morphogo.com/file/movie_en.mp4">
+          <img class='videoFill' src="en_banner_gif.gif" />
+          <img class="videoed" src="VIDEO_BUTTON.png" />
+
+        </div>
+        <div class="masklayer">
+          <!--遮罩层-->
+          <div class="videos"></div>
+          <!--存放视频-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <script>
+    $('.videolist').each(function () {
+      // $(this).hover(function(){ 
+      //     $(this).find('.videoed').show();
+      // },function(){
+      //     $(this).find('.videoed').hide();
+      // });
+      $(this).click(function () {
+        // var video = $(this).attr('ipath');
+        $('.videos').html("<video id=\"video\" src='https://www.morphogo.com/file/movie_en.mp4' style='width:100%' preload=\"auto\" controls=\"controls\" autoplay=\"autoplay\"></video><img onClick=\"close1()\" class=\"vclose\" src=\"gb.png\" width=\"25\" height=\"25\"/>");
+        $('.videos').show();
+        $('.masklayer').show(); //遮罩层弹出
+        $('body').css('overflow', 'hidden'); //禁止滚动
+        winHeight = document.body.clientHeight;
+        $(".masklayer").height(winHeight + 5000 + "px");
+      });
+    });
+
+    function close1() {
+      var v = document.getElementById('video');
+      $('.videos').hide();
+      $('.masklayer').hide();//遮罩层隐藏
+      v.pause();
+      $('.videos').html();
+    }
+  </script>
+</body>
+
+</html>
